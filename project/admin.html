@@ -1,0 +1,39 @@
+
+<html>
+<head>
+
+ <link rel="stylesheet" href="style.css">
+</head>
+
+</style>
+<body>
+<div class = "logo">
+ <img src = "logo.png" alt="logo" width="100px" height="100px">
+ </div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+   <ul>
+  
+ <li><a href="#about">Profile</a></li></li>
+ <li><a href="#about">Upload</a></li>
+<li><a href="#about">Logout</a></li>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</body>
+</html>

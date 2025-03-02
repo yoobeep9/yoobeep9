@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Cake with Blowing Candles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .cake {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: #ffcc99;
+      border-radius: 50% 50% 10% 10%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cake-top {
+      width: 100%;
+      height: 30px;
+      background: #ff5e57;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      top: -20px;
+    }
+
+    .candles {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .candle {
+      width: 10px;
+      height: 40px;
+      background-color: #ff7f50;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .flame {
+      width: 10px;
+      height: 10px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flame-animation 1s infinite alternate;
+    }
+
+    .blown-out .flame {
+      animation: none;
+      background-color: #ccc;
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    @keyframes flame-animation {
+      0% {
+        transform: translateX(-50%) scale(1);
+      }
+      100% {
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+
+    .message {
+      font-size: 24px;
+      color: #ff5e57;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .button
